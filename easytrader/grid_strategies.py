@@ -12,7 +12,7 @@ import pywinauto.clipboard
 
 from easytrader.log import logger
 from easytrader.utils.captcha import captcha_recognize
-from easytrader.utils.win_gui import SetForegroundWindow, ShowWindow, win32defines
+from easytrader.utils.win_gui import  ShowWindow, win32defines
 
 if TYPE_CHECKING:
     # pylint: disable=unused-import
@@ -120,6 +120,7 @@ class Copy(BaseStrategy):
                         )  # 模拟输入验证码
 
                         self._trader.app.top_window().set_focus()
+
                         pywinauto.keyboard.SendKeys("{ENTER}")  # 模拟发送enter，点击确定
                         try:
                             logger.info(
