@@ -30,6 +30,6 @@ if __name__ == "__main__":
   # ipo_data = get_today_ipo_data()
   # print(ipo_data)
   # 刷新数据
-  user.refresh()
+  # user.refresh()
   # 退出客户端
   # user.exit()
